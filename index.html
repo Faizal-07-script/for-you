@@ -42,9 +42,10 @@
     img { block-size: auto; }
 
     iframe {
-      block-size: 175px;
+      min-block-size: 200px;
+      aspect-ratio: 16 / 9;
       margin-block-start: 10px;
-      background: #f5f1ed;
+      background: #171411;
     }
 
     a {
@@ -67,12 +68,24 @@
   <main>
     <img src="./for-you.jpg" width="735" height="688" alt="Anak kucing membawa buket bunga, dengan tulisan For you.">
     <iframe
-      src="https://embed.music.apple.com/us/album/mia-sebastians-theme/1440863506?i=1440863816"
-      title="Mia &amp; Sebastian’s Theme — Justin Hurwitz"
+      id="music-player"
+      data-src="https://www.youtube.com/embed/J6qIzKxmW8Y?start=64&amp;end=94&amp;autoplay=1&amp;playsinline=1&amp;rel=0"
+      title="Merry Go Round of Life — Grissini Project (1:04–1:34)"
       referrerpolicy="strict-origin-when-cross-origin"
-      allow="autoplay; encrypted-media"
+      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+      allowfullscreen
     ></iframe>
-    <a href="https://www.youtube.com/watch?v=D3ovuBdbUqk" target="_blank" rel="noopener">Lagu lengkap di YouTube</a>
+    <a href="https://www.youtube.com/watch?v=J6qIzKxmW8Y&amp;t=64s" target="_blank" rel="noopener">Buka dari 1:04 di YouTube</a>
   </main>
+  <script>
+    const player = document.querySelector("#music-player");
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.intersectionRatio > 0.5) {
+        player.src = player.dataset.src;
+        observer.disconnect();
+      }
+    }, { threshold: 0.51 });
+    observer.observe(player);
+  </script>
 </body>
 </html>
