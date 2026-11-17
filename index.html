@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7eee4">
+  <meta name="robots" content="noindex, nofollow">
+  <title>For you</title>
+  <link rel="icon" type="image/jpeg" href="./for-you.jpg">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      min-block-size: 100vh;
+      min-block-size: 100svh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 24px 16px;
+      background: radial-gradient(ellipse at 50% 6%, #fffbf5 0%, #f7eee4 56%, #eadbcd 100%);
+      color: #5e493d;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    main {
+      inline-size: min(100%, 414px);
+      padding: 10px 10px 4px;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      background: #fffcf8;
+      box-shadow: 0 24px 60px -30px #6349388c, 0 3px 12px #63493812;
+    }
+
+    img,
+    iframe {
+      display: block;
+      inline-size: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    img { block-size: auto; }
+
+    iframe {
+      block-size: 175px;
+      margin-block-start: 10px;
+      background: #f5f1ed;
+    }
+
+    a {
+      display: grid;
+      min-block-size: 44px;
+      place-items: center;
+      color: inherit;
+      font-size: 0.8125rem;
+      text-underline-offset: 0.2em;
+    }
+
+    a:focus-visible,
+    iframe:focus-visible {
+      outline: 2px solid #8f3d28;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="./for-you.jpg" width="735" height="688" alt="Anak kucing membawa buket bunga, dengan tulisan For you.">
+    <iframe
+      src="https://embed.music.apple.com/us/album/mia-sebastians-theme/1440863506?i=1440863816"
+      title="Mia &amp; Sebastian’s Theme — Justin Hurwitz"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="autoplay; encrypted-media"
+    ></iframe>
+    <a href="https://www.youtube.com/watch?v=D3ovuBdbUqk" target="_blank" rel="noopener">Lagu lengkap di YouTube</a>
+  </main>
+</body>
+</html>
